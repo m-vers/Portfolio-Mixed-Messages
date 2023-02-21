@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <!-- Site tab -->
+	  <title>Tolkien Quotes</title>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1 user-scalable=no">
+      <!-- CSS -->
+	  <link href="./Resources/CSS/style.css" rel="stylesheet" type="text/css">
+      <!-- Fonts -->
+      <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:700|Barlow:400,700" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Playfair+Display:400,900" rel="stylesheet">
+  </head>
+
+  <body>
+      <!-- Site Header-->
+    <header role="banner" class="siteBanner">
+      <!-- Site Navigation -->
+      <nav class="siteNavigation">
+        <a href="#" class="navbar-brand">
+          <img src="./Resources/Images/elvish-spiral.svg" alt="Elvish-spiral">
+        </a>
+        <div class="navbarButton">
+          <a href="#" class="button buttonPrimary">Sign In</a>
+          <a href="#" class="button buttonSecondary">Sign Up</a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+    <!-- Main Content Header -->
+      <section role="region" class="mainHeader">
+        <div class="regionBanner">
+          <div class="mainTitle">
+              <h1 class="mainTitle" id="pageTitle">Tolkien LOTR Quotes</h1>
+              <br>
+              <p class="mainTitle">Hello, please enjoy some of my favorite quotes from Tolkien's famous series, <span>The Lord of the Rings</span>.</p>
+            </div>
+          </div>
+        </section>
+	    <h2>Click to see some LOTR Quotes!</h2>
+	    <p id="lotr"></p>
+	    <div id="buttonContainer">
+		    <button id="lotrButton">View the Precious!</button>
+	    </div>
+         <!-- Add Quotes -->
+      <section role="region" class="quoteAdd">
+        <div class="container">
+          <h2>Add a Quote</h2>
+          <a class="anchor" name="target-contact"></a>
+          <p>Want to add some LOTR quotes yourself? Then please fill out the information below.</p>
+          <form class="quoteForm">
+            <input type="email" placeholder="Email Address">
+            <input type="text" placeholder="Requested Date">
+            <textarea placeholder="Add Quote"></textarea>
+            <button type="submit" class="button buttonRequest">Send Request</button>
+          </form>
+        </div>
+      </section>
+      <script src="messages.js"></script>
+    </main>
+
+    <!-- Site Footer -->
+    <footer role="info" class="footer clearfix">
+      <ul class="footerLeft">
+          <li>
+            Copyright &copy; 2023. Tolkien Quotes. All Rights Reserved.
+          </li>
+        </ul>
+        <ul class="footerRight">
+          <li>
+              Follow @FakeLinkTolkienQuotes
+          </li>
+        </ul>
+    </footer>
+  </body>
+</html>
