@@ -23,9 +23,9 @@ html {
 
 body {
   margin: 0 auto;
-  display: block;
+  display: inline-block;
   overflow-x: hidden;
-  width: 98%;
+  width: 100%;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   color: #333333;
@@ -189,6 +189,10 @@ div {
   }
   
   /* Site Footer */  
+
+  footer {
+    margin: 20px auto;
+  }
   .footerLeft {
     display: inline-block;
   }
@@ -221,8 +225,17 @@ div {
     margin-left: 20px;
   }
   
-  /* 5. Component Styles
-  ======================================== */
+  /* Main Body */
+
+  main {
+    max-width: 750px;
+    background-color: #BFBFBF;
+    padding: 20px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   button {
     border: none;
   }
