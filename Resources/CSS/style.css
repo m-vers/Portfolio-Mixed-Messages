@@ -67,9 +67,10 @@ div {
   }
 
   h2 {
-    font-size: calc(65px / 1.25);
+    font-size: 1.25rem;
     margin-top: 10px;
     line-height: 0.85;
+    font-family: 'Open Sans', Helvetica, sans-serif;
   }
 
   @media(min-width: 720px) {
@@ -157,10 +158,10 @@ div {
     box-shadow: 0 2px 5px hsl(0deg 0% 63% / 50%);
   }
 
-.siteNavigation img {
-  width: 100px;
-  height: auto;
-}
+  .siteNavigation img {
+    width: 100px;
+    height: auto;
+  }
 
   .navbarButton {
     display: inline-block;
@@ -260,7 +261,7 @@ div {
   .buttonRequest {
     background-color: #F9F9F9;
   }
-  
+
   .button:hover {
     opacity: 0.75;
   }
