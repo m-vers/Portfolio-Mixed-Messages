@@ -92,14 +92,14 @@ div {
 
   p {
     font-family: 'Playfair Display', Georgia, serif;
-    font-size: 16px;
+    font-size: 1.2rem;
     line-height: 23px;
     margin: 0 0 15px;
   }
   a {
     font-family: 'Open Sans', Helvetica, sans-serif;
     font-size: 16px;
-    color: #333333;
+    color: #0c0c0c;
   }
   ul {
     padding: 0;
@@ -256,10 +256,27 @@ div {
     transition: opacity 0.5s ease;
   }
 
+  #lotrButton,
+  .buttonRequest {
+    background-color: #F9F9F9;
+  }
+  
   .button:hover {
     opacity: 0.75;
   }
+
+  #quoteContainer {
+    background-color: #FFFFFF;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
   
+  .quoteAdd {
+    margin-top: 100px;
+  }
+
   img {
     margin-bottom: 30px;
     width: 100%;

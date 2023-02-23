@@ -40,24 +40,26 @@
             </div>
           </div>
         </section>
-      <div id="quoteContainer">
-	      <h2>Click to see some LOTR Quotes!</h2>
-	      <p id="lotr"></p>
+      <div id="overallQuoteContainer">
+	      <h2>Check out some LOTR Quotes!</h2>
+        <div id="quoteContainer">
+	        <p id="lotr"></p>
+        </div>
       </div>
 	    <div id="buttonContainer">
 		    <button id="lotrButton">View the Precious!</button>
 	    </div>
+      
          <!-- Add Quotes -->
       <section role="region" class="quoteAdd">
         <div class="container">
           <h2>Add a Quote</h2>
-          <a class="anchor" name="target-contact"></a>
           <p>Want to add some LOTR quotes yourself? Then please fill out the information below.</p>
           <form class="quoteForm">
             <input type="email" placeholder="Email Address">
             <input type="text" placeholder="Requested Date">
             <textarea placeholder="Add Quote"></textarea>
-            <button type="submit" class="button buttonRequest">Send Request</button>
+            <button type="submit" class="button buttonRequest" id="sendButton">Send Request</button>
           </form>
         </div>
       </section>

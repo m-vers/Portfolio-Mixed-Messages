@@ -17,10 +17,28 @@ let quote = document.getElementById('lotr');
 function quoteSelector(){
   let randomQuote = Math.floor(Math.random() * quotes.length);
   return quotes[randomQuote];
-}
+};
 
 function showQuote(){
   quote.innerHTML = quoteSelector() + '   -   J.R.R. Tolkien';
-}
+};
 
 button.addEventListener('click', showQuote);
+
+let secondButton = document.getElementById('sendButton');
+
+button.addEventListener('mousedown', () => {
+  button.style.backgroundColor = 'grey';
+});
+
+button.addEventListener ('mouseup', () => {
+  button.style.backgroundColor = '#F9F9F9';
+});
+
+secondButton.addEventListener('mousedown', () => {
+  secondButton.style.backgroundColor = 'grey';
+});
+
+secondButton.addEventListener ('mouseup', () => {
+  secondButton.style.backgroundColor = '#F9F9F9';
+});
