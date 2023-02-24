@@ -131,9 +131,10 @@ li {
 input, textarea {
   background-color: #333333;
   border: none;
-  border-radius: 100px;
+  border-radius: 40px;
   box-shadow: none;
   color: #FFFFFF;
+  font-family:  sans-serif;
   margin-bottom: 15px;
   padding: 20px;
   transition: border-color 0.5s ease;
