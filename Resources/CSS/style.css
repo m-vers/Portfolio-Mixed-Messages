@@ -1,300 +1,267 @@
 /* Site Stylesheet
   1. Global Styles
   2. Typography Styles
-  3. Content Styles
+  3. Form Styles
+  4. Button Styles
+  5. Header Styles
+  6. Main Styles
+  7. Footer Styles
 ======================================== */
 
 /* 1. Global Styles
 ======================================== */
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
-html {
+body {
+  background-color:gainsboro;
+  color: #333333;
   font-family: sans-serif;
-  line-height: 1.15;
-  min-height: 100%;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
   margin: 0 auto;
-  overflow-x: hidden;
+  text-align: left;
+  text-rendering: optimizeLegibility;
   width: 100%;
   -ms-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
 }
 
-body {
-  margin: 0 auto;
-  display: inline-block;
-  overflow-x: hidden;
-  width: 100%;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  color: #333333;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  text-align: left;
-}
-
-.clearfix::after {
-  content: " ";
-  clear: both;
-  display: table;
-}
-
-div {
-  display: block;
-}
-
-  /* 2. Typography Styles
-  ======================================== */
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-weight: 700;
-    line-height: 1.25;
-    margin-bottom: 15px;
-    transition: font-size 0.25s ease;
-    text-transform: uppercase;
+/* 2. Typography Styles
+======================================== */ 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  line-height: 0.85;
+  margin-bottom: 15px;
+  transition: font-size 0.25s ease;
   }
 
+h1 {
+  font-size: 2rem;
+  font-family: 'Playfair Display', Georgia, serif;    text-transform: uppercase;
+  }
+
+h2 {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  }
+
+p {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.2rem;
+  line-height: 30px;
+  margin: 0 0 15px;
+  }
+
+a {
+  color: #0c0c0c;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  font-size: 16px;
+  }
+
+ul {
+  padding: 0;
+  margin: 0;
+  }
+
+li {
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 23px;
+  list-style: none;
+  }
+
+@media(max-width: 380px) {
+  .logo {
+    display: none;
+  }
+}
+
+@media(min-width: 720px) {
   h1 {
-    font-size: calc(100px / 1.25);
-    line-height: 0.85;
-  }
-
+    font-size: calc(65px / 1.25);
+    }
   h2 {
-    font-size: 1.25rem;
-    margin-top: 10px;
-    line-height: 0.85;
-    font-family: 'Open Sans', Helvetica, sans-serif;
-  }
-
-  @media(min-width: 720px) {
-    h1 {
-      font-size: calc(65px / 1.25);
+    font-size: calc(65px / 1.25);
     }
-    h2 {
-      font-size: calc(65px / 1.25);
-    }
-  }
-
-  @media(min-width: 1024px) {
-    h1 {
-      font-size: 100px;
-    }
-    h2 {
-      font-size: 60px;
-    }
-  }
-
-  p {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-size: 1.2rem;
-    line-height: 23px;
-    margin: 0 0 15px;
-  }
-  a {
-    font-family: 'Open Sans', Helvetica, sans-serif;
-    font-size: 16px;
-    color: #0c0c0c;
-  }
-  ul {
-    padding: 0;
-    margin: 0;
-  }
-  li {
-    font-family: 'Open Sans', Helvetica, sans-serif;
-    font-size: 16px;
-    line-height: 23px;
-    list-style: none;
-  }
-  img {
-    width: 100%;
-  }
-
-    /* 3. Content Styles
-  ======================================== */
-  .regionBanner {
-    background-image: url('../Images/tyler-lastovich-wmQJwcDmMl4-unsplash.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    margin: 20px auto;
-    width: 100%;
-    padding: 0 15px;
-    display: block;
-  }
-  .mainTitle {
-    text-align: center;
-    color: #F9F9F9;
-    position: relative;
-    text-shadow: 2px 2px #070707;
-  }
-  .regionBanner:before, .regionBanner:after {
-    content: " ";
-    display: table;
-    clear: both;
-  }
-  
-  /* Site Navigation */
-  .siteBanner {
-    background-color: #FFFFFF;
-    min-height: 70px;
-  }
-
-  .siteNavigation {
-    position: relative;
-    margin: 0 auto;
-    width: 100%;
-    padding: 0.5rem 1rem;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    box-shadow: 0 2px 5px hsl(0deg 0% 63% / 50%);
-  }
-
-  .siteNavigation img {
-    width: 100px;
-    height: auto;
-  }
-
-  .navbarButton {
-    display: inline-block;
-  }
-
-  .navbarButton,
-  .footerRight {
-    float: right;
-  }
-
-  .navbarButton a {
-    text-decoration: none;
-    margin-left: 20px;
-  }
-
-  .buttonPrimary {
-    color: #fff;
-    background-color: #007bff;
-    border-color: #007bff;
-  }
-
-  .button {
-    display: inline-block;
-    font-weight: 400;
-    text-align: center;
-  }
-  
-  /* Site Footer */  
-  .footerLeft {
-    display: inline-block;
-  }
-
-  .footerRight li {
-    display: inline;
-  }
-
-  .footer {
-    background-color: #E8E8E8;
-    padding: 30px;
-  }
-
-  .footer-navigation {
-    margin: 0 auto;
-    max-width: 1280px;
-  }
-
-  .footer-right {
-    float: right;
-    margin-top: 15px;
-  }
-  
-  .footer li {
-    line-height: 0;
-  }
-
-  .footer li a {
-    text-decoration: none;
-    margin-left: 20px;
-  }
-  
-  /* Main Body */
-
-  main {
-    max-width: 750px;
-    background-color: #BFBFBF;
-    padding: 20px;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  
+  p,
+  a,
+  ul,
+  li,
+  input,
+  textarea,
   button {
-    border: none;
+    font-size: 1.75rem;
+    line-height: 40px;
+    }
   }
 
-  button:hover {
-    cursor: pointer;
-  }
+@media(min-width: 1024px) {
+  h1 {
+    font-size: 100px;
+    }
+  h2 {
+    font-size: 60px;
+    }
+  p,
+  a,
+  ul,
+  li,
+  input,
+  textarea,
+  button {
+    font-size: 2.5rem;
+    line-height: 60px;
+    }
+  } 
 
-  .button, 
-  #lotrButton {
-    border-radius: 100px;
-    display: inline-block;
-    font-family: 'Open Sans', Helvetica, sans-serif;
-    font-size: 16px;
-    font-weight: 700;
-    text-transform: uppercase;
-    line-height: normal;
-    padding: 15px 30px;
-    text-align: center;
-    text-decoration: none;
-    transition: opacity 0.5s ease;
-  }
+/* 3. Form Styles
+======================================== */
+input, textarea {
+  background-color: #333333;
+  border: none;
+  border-radius: 100px;
+  box-shadow: none;
+  color: #FFFFFF;
+  margin-bottom: 15px;
+  padding: 20px;
+  transition: border-color 0.5s ease;
+}
 
-  #lotrButton,
-  .buttonRequest {
-    background-color: #F9F9F9;
-  }
+textarea {
+  width: 100%;
+}
 
-  .button:hover {
-    opacity: 0.75;
-  }
+/* 4. Button Styles
+======================================== */
+button {
+  border: none;
+}
 
-  #quoteContainer {
-    background-color: #FFFFFF;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+button:hover {
+  cursor: pointer;
+}
+
+.button {
+  border-radius: 100px;
+  display: inline-block;
+  line-height: normal;
+  padding: 15px 30px;
+  text-align: center;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  transition: opacity 0.5s ease;
+}
+
+.button:hover {
+  opacity: 0.75;
+}
+
+#lotrButton,
+.buttonRequest {
+  background-color: #F9F9F9;
+}
+
+#lotrButton {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.signInBtn {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: #fff;
+}
+
+/* 5. Header Styles
+======================================== */ 
+header {
+  background-color: #FFFFFF;
+  box-shadow: 0 2px 5px hsl(0deg 0% 63% / 50%);
+  margin: 0 auto;
+  min-height: 70px;
+  position: relative;
+  width: 100%;
   }
   
-  .quoteAdd {
-    margin-top: 100px;
-  }
+nav {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+}
 
-  img {
-    margin-bottom: 30px;
-    width: 100%;
-    padding: 0 2%;
-    text-align: center;
-  }
+.logo {
+  height: auto;
+  width: 100px;
+}
 
-  input, textarea {
-    margin-bottom: 15px;
-    padding: 20px;
-    border: none;
-    box-shadow: none;
-    transition: border-color 0.5s ease;
-    background-color: #333333;
-    color: #FFFFFF;
-    font-size: 16px;
-    border-radius: 100px;
-    width: 100%;
-    display: block;
-  }
+/* 6. Main Styles
+======================================== */ 
+main {
+  max-width: 750px;
+  background-color: #BFBFBF;
+  padding: 20px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.quote,
+.quoteAdd {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.siteHeader {
+  background-image: url('../Images/tyler-lastovich-wmQJwcDmMl4-unsplash.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #FFFFFF;
+  display: block;
+  margin: 20px auto;
+  padding: 0 15px;
+  text-align: center;
+  text-shadow: 2px 2px #070707;
+  width: 100%;
+}
+
+.siteHeader:before, .siteHeader:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+#lotr {
+  display: none;
+  background-color: #FFFFFF;
+  padding: 1rem;
+  margin-bottom: 60px;
+  margin-top: 20px;
+}
+
+/* 7. Footer Styles
+======================================== */ 
+footer {
+  background-color: #FFFFFF;
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}

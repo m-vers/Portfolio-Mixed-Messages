@@ -21,6 +21,7 @@ function quoteSelector(){
 
 function showQuote(){
   quote.innerHTML = quoteSelector() + '   -   J.R.R. Tolkien';
+  quote.style.display = "block";
 };
 
 button.addEventListener('click', showQuote);

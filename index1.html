@@ -3,60 +3,64 @@
   <head>
       <!-- Site tab -->
 	  <title>Tolkien Quotes</title>
+      <!-- Meta Info -->
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1 user-scalable=no">
       <!-- CSS -->
 	  <link href="./Resources/CSS/style.css" rel="stylesheet" type="text/css">
       <!-- Fonts -->
-      <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:700|Barlow:400,700" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Playfair+Display:400,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:700|Barlow:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Playfair+Display:400,900" rel="stylesheet">
   </head>
 
   <body>
       <!-- Site Header-->
-    <header role="banner" class="siteBanner">
+    <header>
       <!-- Site Navigation -->
-      <nav class="siteNavigation">
-        <a href="#" class="navbar-brand">
-          <img src="./Resources/Images/elvish-spiral.svg" alt="Elvish-spiral">
+      <nav>
+        <a href="#" class="navbarLogo">
+          <img class="logo" src="./Resources/Images/elvish-spiral.svg" alt="Elvish-spiral">
         </a>
-        <div class="navbarButton">
-          <a href="#" class="button buttonPrimary">Sign In</a>
-          <a href="#" class="button buttonSecondary">Sign Up</a>
+        <div class="navBtnsContainer">
+          <a href="#" class="button signInBtn">Sign In</a>
+          <a href="#" class="button signUpBtn">Sign Up</a>
         </div>
       </nav>
     </header>
 
     <!-- Main Content -->
     <main>
-    <!-- Main Content Header -->
-      <section role="region" class="mainHeader">
-        <div class="regionBanner">
-          <div class="mainTitle">
-              <h1 class="mainTitle" id="pageTitle">Tolkien LOTR Quotes</h1>
+    <!-- Main Image & Title -->
+      <section role="heading" class="siteHeader">
+        <div class="siteHeaderContainer">
+          <div class="siteTitleContainer">
+              <h1>Tolkien LOTR Quotes</h1>
               <br>
-              <p class="mainTitle">Hello, please enjoy some of my favorite quotes from Tolkien's famous series, <span><em> The Lord of the Rings</em></span>.</p>
+              <p>Hello, please enjoy some of my favorite quotes from Tolkien's famous series, <span><em> The Lord of the Rings</em></span>.</p>
             </div>
           </div>
         </section>
-      <div id="overallQuoteContainer">
-	      <h2>Check out some LOTR Quotes!</h2>	    
-        <div id="buttonContainer">
-		    <button id="lotrButton">View the Precious!</button>
-	    </div>
-        <div id="quoteContainer">
-	        <p id="lotr"></p>
-        </div>
-      </div>
 
+    <!-- Main Quote Section -->
+      <section class="quote" role="region">
+        <div class="quoteContainer">
+	        <h2>Check out some LOTR Quotes!</h2>	    
+        <div class="quoteBtnContainer">
+		      <button class="button" id="lotrButton">View the Precious!</button>
+	      </div>
+          <div class="quoteGeneratorContainer">
+	          <p id="lotr"></p>
+          </div>
+        </div>
+      </section>
       
-         <!-- Add Quotes -->
+    <!-- Add Quotes -->
       <section role="region" class="quoteAdd">
-        <div class="container">
+        <div class="quoteAddContainer">
           <h2>Add a Quote</h2>
           <p>Want to add some LOTR quotes yourself? Then please fill out the information below.</p>
-          <form class="quoteForm">
+          <form class="quoteForm" role="form">
             <input type="email" placeholder="Email Address">
             <input type="text" placeholder="Requested Date">
             <textarea placeholder="Add Quote"></textarea>
@@ -64,11 +68,13 @@
           </form>
         </div>
       </section>
+
+    <!-- JavaScript -->
       <script src="messages.js"></script>
     </main>
 
     <!-- Site Footer -->
-    <footer role="info" class="footer clearfix">
+    <footer role="info">
       <ul class="footerLeft">
           <li>
             Copyright &copy; 2023. Tolkien Quotes. All Rights Reserved.
