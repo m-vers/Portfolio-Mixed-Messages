@@ -1,3 +1,4 @@
+//Quote Array
 let  quotes = ["Moonlight drowns out all but the brightest stars.",
   "It's a dangerous business, Frodo, going out your door. You step onto the road, and if you don't keep your feet, there's no knowing where you might be swept off to.",
   "It's the job that's never started as takes longest to finish.",
@@ -11,7 +12,20 @@ let  quotes = ["Moonlight drowns out all but the brightest stars.",
   "Deeds will not be less valiant because they are unpraised."
 ]
 
+// //Add Quotes to Array
+let secondButton = document.getElementById('sendButton');
+
+let newQuote = document.getElementById('textToArray');
+
+function addQuoteToArray() {
+  quotes.push(newQuote.value);
+}
+
+secondButton.addEventListener('click', addQuoteToArray);
+
+//Grab quotes from Array
 let button = document.getElementById('lotrButton');
+
 let quote = document.getElementById('lotr');
 
 function quoteSelector(){
@@ -26,8 +40,8 @@ function showQuote(){
 
 button.addEventListener('click', showQuote);
 
-let secondButton = document.getElementById('sendButton');
 
+//Button Events
 button.addEventListener('mousedown', () => {
   button.style.backgroundColor = 'grey';
 });
