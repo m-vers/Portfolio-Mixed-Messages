@@ -12,17 +12,6 @@ let  quotes = ["Moonlight drowns out all but the brightest stars.",
   "Deeds will not be less valiant because they are unpraised."
 ]
 
-// //Add Quotes to Array
-let secondButton = document.getElementById('sendButton');
-
-let newQuote = document.getElementById('textToArray');
-
-function addQuoteToArray() {
-  quotes.push(newQuote.value);
-}
-
-secondButton.addEventListener('click', addQuoteToArray);
-
 //Grab quotes from Array
 let button = document.getElementById('lotrButton');
 
@@ -40,6 +29,30 @@ function showQuote(){
 
 button.addEventListener('click', showQuote);
 
+// //Add Quotes to Array
+let quoteFormInfo = [];
+// ex. {email: something@gmail.com, date: 123456, quote: 'some quote}
+const addQuoteInfo = (ev) => {
+  ev.preventDefault(); //stop form submittal
+  let quoteInfo = document.getElementById('textToArray').value;
+  quoteFormInfo.push(quoteInfo);
+  document.forms[0].reset(); // clear form for next entry
+}
+
+// locale storage
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('sendButton').addEventListener('click', addQuoteInfo)
+});
+
+let secondButton = document.getElementById('sendButton');
+
+function addQuoteToArray() {
+  for(let i = 0; i < quoteFormInfo.length; i++) {
+  quotes.push(quoteFormInfo[i]);
+  }
+};
+
+secondButton.addEventListener('click', addQuoteToArray);
 
 //Button Events
 button.addEventListener('mousedown', () => {
