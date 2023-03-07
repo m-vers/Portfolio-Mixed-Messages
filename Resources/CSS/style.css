@@ -144,6 +144,11 @@ textarea {
   width: 100%;
 }
 
+form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 /* 4. Button Styles
 ======================================== */
 button {
